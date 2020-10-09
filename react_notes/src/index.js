@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Notes from './Notes';
+import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
-  <Notes></Notes>,
+  <App/>,
   document.getElementById('root')
 );
 
