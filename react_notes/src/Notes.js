@@ -1,5 +1,6 @@
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import Table from 'react-bootstrap/Table';
+import Note from './Note';
 
 var notesList = [
     {
@@ -29,6 +30,23 @@ function Notes(){
                         <th>Content</th>
                         <th>Date</th>
                     </tr>
+                    <Note/>
+                    <Note
+                        title = "Go shopping"
+                        category = "To do"
+                        content = "Buy some vegitables"
+                        date={new Date("2020-12-12")}
+                    />
+                    {notesList.map((note, key) => {
+                        return(
+                            <Note key={key}
+                                title = {note.title}
+                                category = {note.category}
+                                content = {note.content}
+                                date = {note.date}
+                            />
+                        );
+                    })}
                 </thead>
             </Table>
         </div>
